@@ -163,9 +163,9 @@ License URI: license.txt
 }
 /*	Links	*/
 	a {
-		color: #664e44;
+		color: #3f92d2;
 		text-decoration:none;
-}
+	}
 	a:hover {
 		color: #664e44;
 		text-decoration:underline;
@@ -648,7 +648,7 @@ License URI: license.txt
 }
 /*	Post	*/
 	.hentry header { line-height: 1.5; }
-	.hentry h1 a { text-decoration: none; line-height: 1.5; }
+	.hentry h1 a { text-decoration: none; line-height: 1.5; color: #664e44; }
 	.hentry time { display: block; }
 	.hentry p.byline { }
 	.hentry footer { clear: both; }

@@ -5,7 +5,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header><h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'pilotfish'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1></header><!-- Post Title -->
+		<header><h1><a href="<?php the_permalink(); ?>" class=".hentry" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'pilotfish'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1></header><!-- Post Title -->
                 <div class="post-entry">
                     <?php the_content(__('Continue Reading &rarr;', 'pilotfish')); ?>
                     
