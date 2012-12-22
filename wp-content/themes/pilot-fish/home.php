@@ -37,6 +37,7 @@ get_header(); ?>
 	<?php
 		// TODO Check proper conventions for The Loop
 		endwhile;
+		posts_nav_link();
 	?>
 
 	<hr>
