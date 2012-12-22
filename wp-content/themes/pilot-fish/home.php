@@ -13,13 +13,18 @@ get_header(); ?>
         
         <hr>
 	<?php
-	query_posts('cat=1');
-	while (have_posts()) : the_post();
-		echo "<h1>";
-		the_title();
-		echo "</h1>";
-		the_content();
-	endwhile;
+$temp = $wp_query;
+$wp_query= null;
+$wp_query = new WP_Query();
+$wp_query->query('posts_per_page=5'.'&paged='.$paged);
+while ($wp_query->have_posts()) : $wp_query->the_post();?>
+<a href=<?php echo '"'; the_permalink(); echo '"'; ?>><h1>
+	<?php the_title(); ?>
+</h1></a>
+	<?php the_author(); the_content(); ?>
+<?php
+// TODO Check proper conventions for The Loop
+endwhile;
 ?>
 
 	<hr>
