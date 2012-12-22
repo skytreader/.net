@@ -28,7 +28,8 @@ while ($wp_query->have_posts()) : $wp_query->the_post();?>
 		echo "(";
 		the_date();
 		echo ")<br />";
-		the_content(); ?>
+		the_content();
+		echo "<hr />"; ?>
 <?php
 // TODO Check proper conventions for The Loop
 endwhile;
