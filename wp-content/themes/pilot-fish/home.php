@@ -40,11 +40,10 @@ get_header(); ?>
 		<?php
 			endwhile;
 			endif;
-			// TODO divify these!
-			next_posts_link( __( '&laquo; Older posts', 'pilotfish' ) );
-			previous_posts_link( __( '&laquo; Newer posts', 'pilotfish' ) );
 		?>
-
+		<!-- TODO Fix div of this -->
+		<div class="previous"><?php next_posts_link( __( '&laquo; Older posts', 'pilotfish' ) ); ?></div>
+		<div class="next"><?php previous_posts_link( __( '&laquo; Newer posts', 'pilotfish' ) ); ?></div>
 	<hr>
 	
 <?php get_sidebar('home'); ?>

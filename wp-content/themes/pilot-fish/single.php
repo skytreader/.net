@@ -8,7 +8,6 @@
  * @since          Pilot Fish 0.1
  */
 get_header(); ?>
-	<div id="post" class="row span8" role="main">
 		<?php if (have_posts()) : ?>
 			<?php while ( have_posts() ) : the_post(); 
 				if( !get_post_format() ) {
@@ -24,6 +23,4 @@ get_header(); ?>
 	<span class="next"><?php next_post_link( '%link', __( 'next post <span class="meta-nav">&rarr;</span>', 'pilotfish' ) ); ?></span>
 	</nav>
 		<?php endif; ?>  
-        </div><!-- end of #post -->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
