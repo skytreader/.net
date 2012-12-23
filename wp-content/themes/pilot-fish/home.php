@@ -17,28 +17,34 @@ get_header(); ?>
 		$wp_query= null;
 		$wp_query = new WP_Query();
 		$wp_query->query('posts_per_page=5'.'&paged='.$paged);
-		while ($wp_query->have_posts()) : $wp_query->the_post();?>
-			<h1><a href=<?php echo '"'; the_permalink(); echo '"'; ?> class="hentry">
-			<?php the_title(); ?>
-			</a></h1>
-			<?php
-				echo "<strong>";
-				the_author();
-				echo "</strong> ";
-				echo "(";
-				the_date();
-				echo ")<br />";
-				the_content();
-				echo "<strong>Posted in: </strong>";
-				the_category(", ");
-				the_tags("<br /><strong>Tags: </strong>", ", ", "");
-				echo "<br /><br /><hr />";
-			?>
-	<?php
-		// TODO Check proper conventions for The Loop
-		endwhile;
-		posts_nav_link();
+		if($wp_query->have_posts()):
+			while ($wp_query->have_posts()) :
+				$wp_query->the_post();
 	?>
+				<h1><a href=<?php echo '"'; the_permalink(); echo '"'; ?> class="hentry">
+				<?php the_title(); ?>
+				</a></h1>
+				<?php
+					echo "<strong>";
+					the_author();
+					echo "</strong> ";
+					echo "(";
+					the_date();
+					echo ")<br />";
+					the_content();
+					echo "<strong>Posted in: </strong>";
+					the_category(", ");
+					the_tags("<br /><strong>Tags: </strong>", ", ", "");
+					echo "<br /><br /><hr />";
+				?>
+		<?php
+			// TODO Check proper conventions for The Loop
+			endwhile;
+			endif;
+			//posts_nav_link();
+			next_posts_link( __( '&laquo; Older posts', 'pilotfish' ) );
+			previous_posts_link( __( '&laquo; Newer posts', 'pilotfish' ) );
+		?>
 
 	<hr>
 	
