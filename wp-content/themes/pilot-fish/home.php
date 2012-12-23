@@ -38,10 +38,9 @@ get_header(); ?>
 					echo "<br /><br /><hr />";
 				?>
 		<?php
-			// TODO Check proper conventions for The Loop
 			endwhile;
 			endif;
-			//posts_nav_link();
+			// TODO divify these!
 			next_posts_link( __( '&laquo; Older posts', 'pilotfish' ) );
 			previous_posts_link( __( '&laquo; Newer posts', 'pilotfish' ) );
 		?>
@@ -49,4 +48,3 @@ get_header(); ?>
 	<hr>
 	
 <?php get_sidebar('home'); ?>
-<?php get_footer(); ?>
