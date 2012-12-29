@@ -42,8 +42,10 @@ get_header(); ?>
 			endif;
 		?>
 		<!-- TODO Fix div of this -->
-		<div class="previous"><?php next_posts_link( __( '&laquo; Older posts', 'pilotfish' ) ); ?></div>
-		<div class="next"><?php previous_posts_link( __( '&laquo; Newer posts', 'pilotfish' ) ); ?></div>
+		<nav id="post-nav" class="pager">
+	<span class="previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> previous post', 'pilotfish' ) ); ?></span>
+	<span class="next"><?php next_post_link( '%link', __( 'next post <span class="meta-nav">&rarr;</span>', 'pilotfish' ) ); ?></span>
+	</nav>
 	<hr>
 	
 <?php get_sidebar('home'); ?>
