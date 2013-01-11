@@ -20,21 +20,11 @@ get_header(); ?>
 		if($wp_query->have_posts()):
 			while ($wp_query->have_posts()) :
 				$wp_query->the_post();
-	?>
-				<h1><a href=<?php echo '"'; the_permalink(); echo '"'; ?> class="hentry">
-				<?php the_title(); ?>
-				</a></h1>
-				<?php
-					echo "<strong>";
-					the_author();
-					echo "</strong> ";
-					echo "(";
-					the_date();
-					echo ")<br />";
-					the_content();
-					echo "<strong>Posted in: </strong>";
-					the_category(", ");
-					the_tags("<br /><strong>Tags: </strong>", ", ", "");
+				if( !get_post_format() ) {
+					get_template_part( 'content', 'standard' );
+				} else {
+					get_template_part( 'content', get_post_format() );
+				}
 					echo "<br /><br /><hr />";
 				?>
 		<?php
