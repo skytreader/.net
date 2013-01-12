@@ -25,7 +25,7 @@ get_header(); ?>
 				} else {
 					get_template_part( 'content', get_post_format() );
 				}
-					echo "<br /><br /><hr />";
+					echo "<hr />";
 				?>
 		<?php
 			endwhile;
