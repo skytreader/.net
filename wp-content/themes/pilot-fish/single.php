@@ -23,4 +23,4 @@ get_header(); ?>
 	<span class="next"><?php next_post_link( '%link', __( 'next post <span class="meta-nav">&rarr;</span>', 'pilotfish' ) ); ?></span>
 	</nav>
 		<?php endif; ?>  
-<?php get_footer(); ?>
+<?php get_sidebar("home"); ?>

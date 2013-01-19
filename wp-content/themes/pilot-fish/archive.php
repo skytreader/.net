@@ -9,7 +9,6 @@
  */
 get_header(); ?>
 
-<div id="content" class="row span8" role="main">
 <?php if (have_posts()) : ?>
 	<h6>
 	<?php
@@ -50,7 +49,6 @@ get_header(); ?>
 		    <div class="next"><?php previous_posts_link(__('next &rarr;', 'pilotfish')); ?></div>
 		  </nav>
 		<?php } ?>
-</div><!-- end of #content -->
+<!-- end of #content -->
         
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_sidebar("home"); ?>
