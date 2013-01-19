@@ -10,7 +10,6 @@
  */
 get_header(); ?>
 
-        <div id="content" class="row span8" role="main">
             <h6><?php _e('We found','pilotfish'); ?> 
 		<?php
                 $allsearch = &new WP_Query("s=$s&showposts=-1");
@@ -43,7 +42,6 @@ get_header(); ?>
 		  </nav>
 		<?php } ?>
 <?php endif; ?>   
-        </div><!-- end of #search-results -->
+<!-- end of #search-results -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_sidebar("home"); ?>
