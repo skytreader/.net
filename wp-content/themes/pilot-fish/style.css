@@ -86,7 +86,8 @@ License URI: license.txt
 }		
 	body {
 		color: #41434A; 
-		font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		/*font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+		font-family: Palatino, "Palatino Linotype", Georgia, Garamond, serif;
 		font-size:  14px;
 		line-height:1.5em;
 		text-rendering:optimizeLegibility;
@@ -96,7 +97,7 @@ License URI: license.txt
 	h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		font-weight:700;
 		word-wrap:break-word;
-		font-family: "Droid Serif","Georgia",serif;
+		font-family: "Georgia",serif;
 }
 	h1 { 
 		color: #593e37;
